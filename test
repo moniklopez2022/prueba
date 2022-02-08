@@ -1,0 +1,17 @@
+var request = require("request");
+
+var options = {
+  method: 'GET',
+  headers: [
+    'Private-Merchant-Id': '90a9f2d93ba508c38971890454897fd4', // Reemplaza esto por tu Private Key
+    'Content-Type': 'application/json'
+  ]
+  url: 'https://api-uat.kushkipagos.com/subscriptions/v1/card/search/1591842658589000', // Ambiente de prueba
+  headers: {'content-type': 'application/json'}
+};
+
+request(options, function (error, response, body) {
+  if (error) throw new Error(error);
+
+  console.log(body);
+});
